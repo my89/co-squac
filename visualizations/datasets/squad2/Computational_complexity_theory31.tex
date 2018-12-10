@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper, onecolumn]{article}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{dialogue}
+\usepackage{mathtools}
+\usepackage{hyperref}
+%\hypersetup{draft}
+
+\usepackage{multirow}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+
+\usepackage{xcolor,pifont}
+%\newcommand{\cmark}{\ding{51}}
+%\newcommand{\xmark}{\ding{55}}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.75}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.6}
+
+\newcommand\cmark {\textcolor{green}{\ding{52}}}
+\newcommand\xmark {\textcolor{red}{\ding{55}}}
+\mdfdefinestyle{dialogue}{
+    backgroundcolor=yellow!20,
+    innermargin=5pt
+}
+\usepackage{amssymb}
+\usepackage{soul}
+\makeatletter
+
+\begin{document}
+
+\hspace{15pt}{\textbf{Section}:Computational complexity theory31\\}
+\\ Context: This motivates the concept of a problem being hard for a complexity class. A problem X is hard for a class of problems C if every problem in C can be reduced to X. Thus no problem in C is harder than X, since an algorithm for X allows us to solve any problem in C. Of course, the notion of hard problems depends on the type of reduction being used. For complexity classes larger than P, polynomial-time reductions are commonly used. In particular, the set of problems that are hard for NP is the set of NP-hard problems. CANNOTANSWER
+
+\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf The complexity of problems often depends on what? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (the type of reduction being used ) }
+\\
+\speak{Student}{\bf What would create a conflict between a problem X and problem C within the context of reduction?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (if every problem in C can be reduced to X ) }
+\\
+\speak{Student}{\bf An algorithm for X which reduces to C would us to do what? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (solve any problem in C ) }
+\\
+\speak{Student}{\bf A problem set that that is hard for the expression NP can also be stated how? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (NP-hard ) }
+\\
+\speak{Student}{\bf What does the complexity of problems not often depend on? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (CANNOTANSWER ) }
+\\
+\speak{Student}{\bf What would not create a conflict between a problem X and problem C within the context of reduction? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (CANNOTANSWER ) }
+\\
+\speak{Student}{\bf What problem in C is harder than X? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (CANNOTANSWER ) }
+\\
+\speak{Student}{\bf How is a problem set that is hard for expression QP be stated? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``'' (CANNOTANSWER ) }
+\\
+ \end{dialogue}\end{tcolorbox}\end{figure}
+
+\end{document}
+
