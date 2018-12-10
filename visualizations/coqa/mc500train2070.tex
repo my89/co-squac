@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper, onecolumn]{article}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{dialogue}
+\usepackage{mathtools}
+\usepackage{hyperref}
+%\hypersetup{draft}
+
+\usepackage{multirow}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+
+\usepackage{xcolor,pifont}
+%\newcommand{\cmark}{\ding{51}}
+%\newcommand{\xmark}{\ding{55}}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.75}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.6}
+
+\newcommand\cmark {\textcolor{green}{\ding{52}}}
+\newcommand\xmark {\textcolor{red}{\ding{55}}}
+\mdfdefinestyle{dialogue}{
+    backgroundcolor=yellow!20,
+    innermargin=5pt
+}
+\usepackage{amssymb}
+\usepackage{soul}
+\makeatletter
+
+\begin{document}
+
+\hspace{15pt}{\textbf{Section}:mc500.train.2070\\}
+\\ Context: The cat woke up from its nap under the couch. Poking his head out from under the couch, there were no dogs there. He walked out from under the couch and stretched out his paws along the hard wood floor. Far outside there was some barking from the dogs, but he was safe from them for now. The smell of tuna was in the air and the cat followed the scent to the kitchen. A woman was making a tuna sandwich for her two kids. When she finished, she put the tuna can on to the floor. The cat slowly walked up to the can and saw some juice inside. He licked up the yummy tuna juice and was sad when it was all gone. The woman brought the tuna sandwiches over to her sons at the table, then she opened the back door to let the dogs in. The cat's fur stood on end as the dogs came running after him. He ran away into the other and back to under the couch where it was safe. CANNOTANSWER
+
+\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf Were there dogs there? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+\colorbox{red!25}{No,}
+{ ``no'' (The ) }
+\\
+\speak{Student}{\bf What could be heard? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``barking'' (barking ) }
+\\
+\speak{Student}{\bf What did the cat smell? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``tuna'' (tuna ) }
+\\
+\speak{Student}{\bf Who was using tuna? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``A woman'' (woman ) }
+\\
+\speak{Student}{\bf What was she preparing? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``tuna sandwich'' (tuna sandwich ) }
+\\
+\speak{Student}{\bf For whom? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``her kids'' (her two kids ) }
+\\
+\speak{Student}{\bf Were they girls? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+\colorbox{red!25}{No,}
+{ ``no'' (her two kids ) }
+\\
+\speak{Student}{\bf Where'd she place the container? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``at the table'' (at the table ) }
+ \end{dialogue}\end{tcolorbox}\end{figure}\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf Was the floor carpeted? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+\colorbox{red!25}{No,}
+{ ``no'' (at the table ) }
+\\
+\speak{Student}{\bf Did the cat get a treat? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+\colorbox{red!25}{Yes,}
+{ ``yes'' (at the table ) }
+\\
+\speak{Student}{\bf Did she open the door? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+\colorbox{red!25}{Yes,}
+{ ``yes'' (at the table ) }
+\\
+\speak{Student}{\bf Where'd the kitty go? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ ``under the couch'' (under the couch ) }
+\\
+ \end{dialogue}\end{tcolorbox}\end{figure}
+
+\end{document}
+

@@ -1,0 +1,126 @@
+\documentclass[11pt,a4paper, onecolumn]{article}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{dialogue}
+\usepackage{mathtools}
+\usepackage{hyperref}
+%\hypersetup{draft}
+
+\usepackage{multirow}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+
+\usepackage{xcolor,pifont}
+%\newcommand{\cmark}{\ding{51}}
+%\newcommand{\xmark}{\ding{55}}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.75}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.6}
+
+\newcommand\cmark {\textcolor{green}{\ding{52}}}
+\newcommand\xmark {\textcolor{red}{\ding{55}}}
+\mdfdefinestyle{dialogue}{
+    backgroundcolor=yellow!20,
+    innermargin=5pt
+}
+\usepackage{amssymb}
+\usepackage{soul}
+\makeatletter
+
+\begin{document}
+
+\hspace{15pt}{\textbf{Section}:Packet switching6\\}
+\\ Context: Connection-oriented transmission requires a setup phase in each involved node before any packet is transferred to establish the parameters of communication. The packets include a connection identifier rather than address information and are negotiated between endpoints so that they are delivered in order and with error checking. Address information is only transferred to each node during the connection set-up phase, when the route to the destination is discovered and an entry is added to the switching table in each network node through which the connection passes. The signaling protocols used allow the application to specify its requirements and discover link parameters. Acceptable values for service parameters may be negotiated. Routing a packet requires the node to look up the connection id in a table. The packet header can be small, as it only needs to contain this code and any information, such as length, timestamp, or sequence number, which is different for different packets. CANNOTANSWER
+
+\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf What does connection orientation require }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ a setup phase in each involved node before any packet is transferred to establish the parameters of communication }
+\\
+\speak{Student}{\bf What is a connection identifier  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ a connection identifier rather than address information and are negotiated between endpoints so that they are delivered in order and with error checking }
+\\
+\speak{Student}{\bf Why is the node requiered to look up  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ Routing a packet requires the node to look up the connection id in a table }
+\\
+\speak{Student}{\bf Is the packet header long  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ The packet header can be small, as it only needs to contain this code and any information, such as length, timestamp, or sequence number }
+\\
+\speak{Student}{\bf What is a set up phase?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf How is error checking involved in delivery?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf A routing packet is required under what system?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf What does the node read? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+ \end{dialogue}\end{tcolorbox}\end{figure}\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf What values are negotiable?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf Can packets ever collide in route? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf Are link parameters based on size? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf Can the node ever acquire the wrong connection id? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf Can address information be changed after the set-up phase? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf Is there a situation where the destination can't be discovered? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf When is the address information not transferred to each node? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf What does connectionless-oriented transmission require? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+ \end{dialogue}\end{tcolorbox}\end{figure}\begin{figure}[t] \small \begin{tcolorbox}[boxsep=0pt,left=5pt,right=0pt,top=2pt,colback = yellow!5] \begin{dialogue}
+ \small 
+ \speak{Student}{\bf What is contained in a large packet header?  }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+\speak{Student}{\bf What does the address information negotiate? }
+\speak{Teacher}\colorbox{pink!25}{$\hookrightarrow$}
+{ CANNOTANSWER }
+\\
+ \end{dialogue}\end{tcolorbox}\end{figure}
+
+\end{document}
+
