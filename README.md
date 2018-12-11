@@ -22,9 +22,23 @@ There are also tools for visualization of the data and output (see the visualiza
 
 ### Format
 The shared format corresponds to SQuAD 2.0 format, with additions made for QuAC and CoQA. 
+The easiest way to understand the format is by cloning the repo, untaring the data in the datasets directory, and running ipython
 Here is an example from QuAC:
 
-![QuAC Example]()
+```
+> git clone https://github.com/my89/co-squac.git
+> cd co-squac/datasets
+> tar -xvf converted.tar
+> tar -xvf original.tar
+> ipython
+
+In [1]: import json
+
+In [2]: quac = json.load(open("converted/quac_dev.json"))
+
+In [3]: quac["data"][0]
+
+```
 
 ### Release
 The datasets directory already contains all three dataset train and development sets converted to this format (as well as the orginally formated data). 
@@ -32,22 +46,22 @@ If you want to regenerate these files, use the scripts in the convert directory.
 
 ### Usage
 In experiments in the comparison paper, the general methodology was to use the joint format for all the datasets and a single model (the AllenNLP dialog-qa model). 
-After getting output from this model by running the predict command:
+After getting output from this model by running the predict command (assuming you are using AllenNLP):
 
 ```
-
+> python -m allennlp.run predict models/squad2.tar co-squac/datasets/converted/quac_dev.json --use-dataset-reader --output-file output/squad2.quac --batch-size 10 --cuda-device 0 --silent
 ```
 
-It would be converted to the source dataset using the appopriate "output" script in the convert directory. For example:
+It would then be converted to the source dataset using the appopriate "output" script in the convert directory. For example:
 
 ```
-
+> python convert/output_quac_to_squad.py --input_file output/squad2.quac --output_file output/squad2.squad
 ```
 
 And then could be evaluated using the official scirpts:
 
 ```
-
+> python co-squac/evals/squad2_eval.py co-squac/datasets/squad2_dev.json output/squad2.squad
 ```
 
 ### Visualization
