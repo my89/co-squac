@@ -8,7 +8,6 @@ The repository was created in support of the following [paper](https://arxiv.org
   journal={ArXiv},
   year={2018}  
 }
-
 ```
 
 If you want the outputs and models generated in this work, they can be found here: [outputs](https://s3.amazonaws.com/my89public/co_squac/output.tar), [models](https://s3.amazonaws.com/my89public/co_squac/models.tar). Running these models depends on [AllenNLP](https://github.com/allenai/allennlp), so please install understand how to use that before you to try to run them. 
@@ -38,7 +37,6 @@ In [1]: import json
 In [2]: quac = json.load(open("converted/quac_dev.json"))
 
 In [3]: quac["data"][0]
-
 ```
 
 ### Release
@@ -79,6 +77,4 @@ Here is an example, assuming you have outputs from a model (in the shared format
 > for i in `ls`; do pdflatex --interaction=nonstopmode $i; done
 > rm *.log *.aux *.out 
 ```
- 
-
 
