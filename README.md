@@ -22,7 +22,8 @@ There are also tools for visualization of the data and output (see the visualiza
 
 ### Format
 The shared format corresponds to SQuAD 2.0 format, with additions made for QuAC and CoQA. 
-The easiest way to understand the format is by cloning the repo, untaring the data in the datasets directory, and running ipython
+The current format is compatible with the standard QuAC format, as read by the AllenNLP data reader.
+The easiest way to understand the format is by cloning the repo, untaring the data in the datasets directory, and running ipython.
 Here is an example from QuAC:
 
 ```
@@ -44,7 +45,7 @@ In [3]: quac["data"][0]
 The datasets directory already contains all three dataset train and development sets converted to this format (as well as the orginally formated data). 
 If you want to regenerate these files, use the scripts in the convert directory. 
 
-### Usage
+### Example Usage
 In experiments in the comparison paper, the general methodology was to use the joint format for all the datasets and a single model (the AllenNLP dialog-qa model). 
 After getting output from this model by running the predict command (assuming you are using AllenNLP):
 
@@ -55,23 +56,28 @@ After getting output from this model by running the predict command (assuming yo
 It would then be converted to the source dataset using the appopriate "output" script in the convert directory. For example:
 
 ```
-> python convert/output_quac_to_squad.py --input_file output/squad2.quac --output_file output/squad2.squad
+> cd co-squac
+> python convert/output_quac_to_squad.py --input_file ../output/squad2.quac --output_file ../output/squad2.squad
 ```
 
 And then could be evaluated using the official scirpts:
 
 ```
-> python co-squac/evals/squad2_eval.py co-squac/datasets/squad2_dev.json output/squad2.squad
+> python evals/squad2_eval.py datasets/squad2_dev.json ../output/squad2.squad
 ```
 
 ### Visualization
 Code to produce visualizations like those found in the original QuAC paper, and those used to do the qualitative analysis, can be found in visualize. 
 Examples of the output is in visualizations folder.
 You can also configure the script, providing system output for future qualitive analysis of errors, or small variation in formatting, such as number of references and interactions per figure.
-The script outputs LaTEX, so you need to compile the files you generate using pdflatex. 
+The script outputs LaTEX, so you need to compile the files you generate using pdflatex.
+Here is an example, assuming you have outputs from a model (in the shared format), to generate 50 random examples from the development set, 8 interactions per page, and no additional references beyond the first one.
 
 ```
-
+> python visualize/visualize_with_predictions.py --input_file datasets/converted/squad2_dev.json --output_directory visualizations/squad2/ --predictions ../output/squad2.quac --examples 50 --interactions 8 --references 0 
+> cd visualizations/squad2
+> for i in `ls`; do pdflatex --interaction=nonstopmode $i; done
+> rm *.log *.aux *.out 
 ```
  
 
