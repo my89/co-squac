@@ -1,6 +1,6 @@
 # co-squac
 A repository for converting between CoQA, SQuAD 2.0, and QuAC and for visualizing the output of such models. 
-The repository was created in support of the following paper (and please cite if you use this repo).
+The repository was created in support of the following [paper](https://arxiv.org/abs/1809.10735) (and please cite if you use this repo).
 
 ```
 @inproceedings{yatskar_cosquac_2018,
@@ -11,9 +11,9 @@ The repository was created in support of the following paper (and please cite if
 
 ```
 
-If you want the outputs and models generated in this work, they can be found here: [outputs](), [models](). Running these models depends on [AllenNLP](), so please install understand how to use that before you to try to run them. 
+If you want the outputs and models generated in this work, they can be found here: [outputs](https://s3.amazonaws.com/my89public/co_squac/output.tar), [models](https://s3.amazonaws.com/my89public/co_squac/models.tar). Running these models depends on [AllenNLP](https://github.com/allenai/allennlp), so please install understand how to use that before you to try to run them. 
 
-If you are unfamiliar with either of these three datasets, please read up on them first: [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/) [QuAC](quac.ai), [CoQA](https://stanfordnlp.github.io/coqa/) ,  
+If you are unfamiliar with either of these three datasets, please read up on them first: [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/) [QuAC](http://quac.ai), [CoQA](https://stanfordnlp.github.io/coqa/). 
 
 This repo offers a shared format for representing all three datasets (essentially QuAC format with an extra field for an abstractive answer).
 It also contains tools for converting from QuAC output style to either SQuAD 2.0 or CoQA output format.
